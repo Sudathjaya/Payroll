@@ -1,0 +1,48 @@
+.center {
+text-align:center;
+   
+}
+.img1{
+    height:120px;
+    width:120px;
+      background-color: powderblue;
+   
+}
+
+
+
+ th {
+    border: 0px solid blue;
+     color:black;
+
+}
+
+table {
+border-collapse:collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+h1,h2,h3,h4 ,h6
+{color:blue;}
+td{
+     height: 30px;
+     width: auto;
+}
+.po{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.content{
+    padding-left:50px;
+    padding-right:50px;
+
+}
+.upmenu{
+    padding-left:20px;
+    padding-right:20px;    
+}

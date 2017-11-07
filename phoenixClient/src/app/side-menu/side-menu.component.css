@@ -1,0 +1,10 @@
+body{margin-top:550px;}
+.glyphicon { margin-right:10px; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 10px }
+.panel-body .table {margin-bottom: 0px; }
+
+.content{
+    padding-right: 10px;
+    padding-left: 10px;
+}

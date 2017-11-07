@@ -1,0 +1,146 @@
+
+<div class="panel panel-info upmenu">
+<div class="panel-heading"><h3 class="center">Employee Payroll</h3>
+<div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+  <a routerLink="/payments"><button type="button" class="btn btn-primary" value="" >Back</button></a>
+      <a routerLink="/deduction"><button type="button" class="btn btn-primary" value="" >Edit</button></a>
+       <a routerLink="/deduction"><button type="button" class="btn btn-primary" value="" >Save</button></a>
+      </ul>
+    </div>
+</div>
+
+
+
+
+<div class="panel-body content" >
+<div class="row">
+<table class="table">
+<thead>
+ <tr class="bg-info text-white">
+<th><h4>Employee Info</h4></th>
+<th><h4>Pay and Allowances</h4></th>
+<th><h4>Deductions</h4></th>
+<th><h4>Total Amount</h4></th>
+
+
+</tr>
+ </thead>
+ <tbody>
+
+<tr class="warning">
+<td><table>
+     <tr>   <th colspan="2">   
+   <div class="img1">
+   <img src="" alt="photo">
+  </div>
+  </th>
+</tr>
+  <tr>
+    <th>ID Number</th>
+    <td>{{eid}}</td>
+  </tr>
+  <tr>
+    <th>Name </th>
+     <td>{{resultsfinals?.emp_name}}</td>
+  </tr>
+  <tr>
+    <th>Designation</th>
+     <td>{{resultsfinals?.designation}}</td>
+  </tr>
+  <tr>
+    <th>Department</th>
+    <td>{{resultsfinals?.dept_name}}</td>
+  </tr>
+  <tr>
+    <th>Date From </th>
+    <td>2/20/17<label>(ddmmyy)</label></td>
+  </tr>
+  <tr>
+    <th>Date To </th>
+     <td>02/10/17<label>(ddmmyy)</label></td>
+  </tr>
+</table> </td>
+
+
+
+<td> <table>
+  <tr>
+    <th>Basic</th>
+    <td>{{resultsfinals?.basic_salary}}</td>
+   </tr>
+  <tr>
+    <th>OT</th>
+         <td>{{resultsfinals?.ot}}</td>
+  </tr>
+  <tr>
+    <th>Bonus</th>
+    <td>{{resultsfinals?.bonus}}</td>
+  </tr>
+    <tr>
+    <th>Traveling</th>
+    <td>{{resultsfinals?.traveling}}</td>
+  </tr>
+    <tr>
+    <th>Medical</th>
+    <td>{{resultsfinals?.medical}}</td>
+  </tr>
+    <tr>
+    <th>Entertainment</th>
+    <td>{{resultsfinals?.entertainment}}</td>
+  </tr>
+  
+    
+</table> </td>
+
+
+
+<td><table>
+<tr>
+    <th>EPF</th>
+    <td>{{resultsfinals?.etf}}</td>
+  </tr>
+  <tr>
+    <th>Leave</th>
+    <td>{{resultsfinals?.leave}}</td>
+  </tr>
+    <tr>
+    <th>Loan_installment</th>
+    <td>{{resultsfinals?.loan_installment}}</td>
+  </tr>
+   <tr>
+    <th>Union_charges</th>
+    <td>{{resultsfinals?.union_charges}}</td>
+  </tr>
+   
+  </table> </td>
+
+
+
+<td>  <table>
+ <tr>
+   <th>Gross Pay</th>
+     <td></td>
+ </tr>
+ <tr>
+  <th>Total Deduction</th>
+
+  <td></td>
+ </tr>
+ <tr>
+  <th>Net Pay</th>
+
+  <td>{{resultsfinals?.total_amount}}</td>
+  </tr>
+
+  </table></td>
+
+
+ </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

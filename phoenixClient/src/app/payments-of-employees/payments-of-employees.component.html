@@ -1,0 +1,80 @@
+
+<div class="panel panel-info upmenu">
+<div class="panel-heading"><h3 class="center">Create Payroll</h3>
+<div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+           <button type="button" class="btn btn-primary" value="" (click)='gettotal()' >Calculate</button>
+  <a routerLink="/payments"><button type="button" class="btn btn-primary" value="" >Back</button></a>
+      <a routerLink="/deduction"><button type="button" class="btn btn-primary" value="" >Edit</button></a>
+       <button (click)='print_pay2()' type="button" class="btn btn-primary" value="" >Save</button>
+      </ul>
+    </div>
+
+
+
+</div>
+<div class="col-sm-4 col-sm-push-8">
+<div class="form-group">
+  <label for="sel1">Select Month:</label>
+  <select class="form-control" #box (ngModelChange)='getMonth(box.value)' [(ngModel)]='date' name='date'>
+    <option>select month number</option>
+    <option *ngFor='let month of month' >{{month.range_id}}</option>
+
+  </select>
+</div>
+</div>
+
+
+
+
+<div class="panel-body content">
+<div class="row">
+<table class="table">
+<thead>
+ <tr class="bg-info text-white">
+     <th></th>
+<th>Employee Id</th>
+<th>Name</th>
+<th>Designation</th>
+<th>Department</th>
+<th>Date</th>
+<th>Bank</th>
+<th>Basic</th>
+<th>Net Salary</th>
+<th>Paid</th>
+<td></td>
+</tr>
+ </thead>
+ <tbody>
+
+<tr class="warning" *ngFor="let payment of payments;let i=index">  
+<td  (click)='test1(payment)'><span class="glyphicon glyphicon-new-window" aria-hidden="true" ></span>   </td>
+<td >{{payment.emp_id}}</td>
+<td routerLink="/employeeinfo" (click)='test1(payment)'>{{payment.emp_name}}</td>
+<td>{{payment.designation}}</td>
+<td>{{payment.dept_name}}</td>
+<td>{{payment.date_of_payment}}{{date_of_payment}}</td>
+
+<!--
+<td><select class="selectpicker" [(ngModel)]="btype[i]" (click)='btest(payment)'>
+  <option>BOC</option>
+  <option>People's</option>
+  <option>NSB</option>
+  </select></td>
+<td>-->
+      <td>  {{payment.bank_name}}</td>
+       <td> {{payment.basic_salary}}</td>
+   <td><b> {{total_amount[i]}}</b></td>
+   
+<td>{{payment.by_paid}}</td>
+<td routerLink="/present_month" (click)='test2(payment)' ><button type="button" class="btn btn-primary">Details</button></td>
+ </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

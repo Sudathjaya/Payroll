@@ -1,0 +1,29 @@
+.center {
+text-align:center;
+   
+}
+table, td, th {
+
+border: 0px solid black;}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top:20px; 
+}
+
+th {
+    height: 30px;
+    color:blue;
+}
+td{
+    
+      text-align:left;   
+}
+body{
+   
+}
+
+
+
+

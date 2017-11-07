@@ -1,0 +1,140 @@
+<div class="po">
+    <h1>Purchace Order (PO) </h1>
+
+    <div class="row">
+	
+		<div class="col-sm-6">
+			<div class="col-sm-6">
+				<label>PO Number</label>
+				<input class="form-control">
+			</div>
+		</div>
+		
+		<div class="col-sm-6">
+		<div class="col-sm-6">
+			<label>Date</label>
+            <div class="input-group input-append date" id="datePicker">
+                <input type="text" class="form-control" name="date" />
+                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+			</div>
+		</div>
+		</div>
+<br/><br/>
+       
+	   
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">Supplier Details</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                   
+                                        <div class="form-group">
+                                            <label>Supplier ID</label>
+                                            <select class="form-control">
+                                                <option selected>Select..</option>
+                                                <option>--Add New--</option>
+                                                <option>1</option>
+                                                <option>2</option>
+												<option>3</option>
+												<option>4</option>
+												
+                                            </select>
+                                        </div>
+                                        
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Supplier Name</label>
+                                            <input class="form-control">
+                                        </div>
+
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>	   
+	   
+	   
+	   
+	    <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Inventory Items</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                            <table class="table table-condensed" >
+                                                <thead>
+                                                <tr>
+                                                    <th>Item ID</th>
+                                                    <th>Item Name</th>
+                                                    <th>Quantity</th>
+                                                    <th>Total amount</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr *ngFor="let poItems of poItems">
+                                                    <td>{{poItems.itemid}}</td>
+                                                    <td>{{poItems.itemname}}</td>
+                                                    <td>{{poItems.qty}}</td>
+                                                    <td>{{poItems.qty*poItems.unitprice}}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>                               
+                            </div>
+                            <div class="col-sm-6">
+                            <div class="panel panel-success">
+                            <div class="panel-heading">Insert Inventry Items</div>
+                            <div class="panel-body">
+                                <form class="form-horizontal" (submit)="addItem($event)">	
+									<label>Item ID</label>
+                                                <select class="form-control" [(ngModel)]="ItemID" name="ItemID" (ngModelChange)="onItemClicked($event)">
+                                                    <option *ngFor="let newitem of newItem" [value]="newitem.Item_NO">{{newitem.Item_NO}}</option>
+                                                </select>
+
+	                                           <!--input type="text" [(ngModel)]="ItemID" name="ItemID" class="form-control"/-->
+
+	                                <label>Barcode</label>
+                                            <input class="form-control" [(ngModel)]="Barcode" name="Barcode" (click)="test($event)">
+	                                <label>Item Name</label>
+                                            <input class="form-control" [(ngModel)]="ItemName" name="ItemName">
+									<label>Unit Price</label>
+                                            <input class="form-control" [(ngModel)]="UnitPrice" name="UnitPrice"><br/>
+                                            <p>Usually price is Rs.{{UnitPrice}} You can change it</p>
+									<label>Quentity</label>
+											<input class="form-control" [(ngModel)]="Qty" name="Qty">
+                                            <br/>
+                                    <input type="submit" value="insert" class="btn-success"/>
+
+                                    <br/>				
+								</form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4"></div>
+              
+        <div class="col-sm-4">
+                
+        <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-primary">Save and print</a>
+            <a href="#" class="btn btn-primary">Save and New</a>
+        </div>
+        </div>
+</div>
+</div>

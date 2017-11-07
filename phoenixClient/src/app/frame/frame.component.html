@@ -1,0 +1,128 @@
+<!--side nav bar from angular material-->
+
+<md-sidenav-layout fullscreen>
+    
+  <md-sidenav #start mode="side" style="width:250px;" [opened]="true" class="sidebarr">
+    <br/><br/><br/><br/>
+    <app-side-menu></app-side-menu>
+  
+  </md-sidenav>
+  
+<!--tool bar>
+  <md-toolbar color="primary">
+    <button md-button (click)="start.toggle()"><i class="material-icons app-toolbar-menu">menu</i></button>
+    <span> chamath</span>
+    
+  </md-toolbar>
+-->
+
+  <div class="content">
+    <br/><br/><br/>
+      <router-outlet></router-outlet>
+
+
+  </div>
+
+
+
+
+</md-sidenav-layout>
+
+
+
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="./app/images/logo.png" style="width:50px; height:50px;"/>
+      <a class="navbar-brand" href="#">Phoenix ERP</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a md-button (click)="start.toggle()"><span class="glyphicon glyphicon-th-list" aria-hidden="true" ></span></a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="text" name="search" placeholder="Search..">
+            </div>
+        </div>
+        
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><p class="navbar-text">Welcome</p></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>User</b> <span class="caret"></span></a>
+			<ul id="login-dp" class="dropdown-menu">
+				<li>
+					 <div class="row">
+							<div class="col-md-12" style="color:darkslategrey; text-align: center;">
+								Welcome User                                
+
+                  <div>
+                    <img src="./app/images/avator.png" style="width:150px; height:190px;"/>
+                  </div>
+
+
+
+							</div>
+							<div class="bottom text-center">
+                <p> View Profile</p><br/>
+                <p> Profile Settings</p>
+							</div>
+					 </div>
+				</li>
+			</ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+<!--top menu bar-->
+
+<!--nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button md-button (click)="start.toggle()">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+    
+
+    
+  </div>
+</nav-->
+

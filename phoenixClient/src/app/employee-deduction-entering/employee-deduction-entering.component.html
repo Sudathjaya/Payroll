@@ -1,0 +1,42 @@
+<div class="" style="padding: 152px">
+<h3>Add Employee Deduction</h3>
+<form class="form-horizontal"  >
+<div class="form-group">
+<label class="control-label col-sm-3" >Employee Id :</label>
+<div class="col-sm-6">
+<input type="text" class="form-control"  placeholder="Employee id" #box (keydown.enter)='getname(box.value)' [(ngModel)]='eid' name="eid">
+</div>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-3" >Name:</label>
+<div class="col-sm-6">
+<input type="text" class="form-control"  placeholder="Enter name" required  [(ngModel)]='name' name="name" >
+</div>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-3" for="">Deduction Type:</label>
+<div class="col-sm-6">
+<select class="selectpicker" style="width: 360px" [(ngModel)]='dtype' name='dtype' #box2 (ngModelChange)='gettype(box2.value)'>
+<option>Select any one</option>
+<option *ngFor='let deduction of deduction'>{{deduction.dtype}}</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-3" for="">Amount:</label>
+<div class="col-sm-6">
+<input type="text" class="form-control" placeholder="Enter Amount" required [(ngModel)]="d_amount" name="d_amount" >
+</div>
+</div>
+<div class="form-group">        
+<div class="col-sm-offset-3 col-sm-6">
+<input type="submit" class="btn btn-info" value="Save" (click)='adddata()'>
+<button type="button" class="btn btn-warning" routerLink="">exit</button>
+<a routerLink="/deduction"><button type="button" class="btn btn-primary" value="" >ADD To New Type</button></a>
+</div>
+</div>
+ </form>
+</div>
+
+
+

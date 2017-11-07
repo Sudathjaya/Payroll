@@ -1,0 +1,16 @@
+{
+  "name": "phoenixserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies":{
+    "express":"^4.13.4",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

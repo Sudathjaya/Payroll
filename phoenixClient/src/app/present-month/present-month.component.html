@@ -1,0 +1,126 @@
+
+<div class="panel panel-info upmenu">
+<div class="panel-heading"><h3 class="center">Employee Payroll</h3>
+<div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+  <a routerLink="/payments"><button type="button" class="btn btn-primary" value="" >Back</button></a>
+      
+      </ul>
+    </div>
+</div>
+
+
+
+<div class="panel-body content" >
+<div class="row">
+<table class="table">
+<thead>
+ <tr class="bg-info text-white">
+<th><h4>Employee Info</h4></th>
+<th><h4>Pay and Allowances</h4></th>
+<th><h4>Deductions</h4></th>
+<th><h4>Total Amount</h4></th>
+
+
+</tr>
+ </thead>
+ <tbody>
+
+<tr class="warning">
+<td><table>
+     <tr>   <th colspan="2">   
+   <div class="img1">
+   <img src="" alt="photo">
+  </div>
+  </th>
+</tr>
+  <tr>
+    <th>ID Number</th>
+    <td>{{eid}}</td>
+  </tr>
+  <tr>
+    <th>Name </th>
+     <td>{{name}}</td>
+  </tr>
+  <tr>
+    <th>Designation</th>
+     <td>{{designation}}</td>
+  </tr>
+  <tr>
+    <th>Department</th>
+    <td>{{department}}</td>
+  </tr>
+
+  <tr> 
+    <th>Current Date </th>
+    <td>2017/04</td>
+  </tr>
+
+</table> </td>
+
+
+
+<td> <table>
+  <tr>
+    <th>Basic</th>
+    <td>{{basic}}</td>
+   </tr>
+  <tr>
+    <th>OT</th>
+     <td>{{ot}}</td>
+  </tr>
+  <tr  *ngFor='let allowance of allowance'>
+    <th>{{allowance.atype}}</th>
+     <td>{{allowance.a_amount}}</td>
+  </tr>
+</table> </td>
+
+
+
+<td><table>
+  <tr *ngFor='let deductions of deductions'>
+    <th>{{deductions.dtype}}</th>
+    <td>{{deductions.d_amount}}</td>
+   </tr>
+     <tr>
+    <th>EPF</th>
+     <td>{{etf}}</td>
+  </tr>
+  <tr>
+    <th>Leave</th>
+     <td>{{leave_days}} Days Rs. {{noPay}}</td>
+     <!--<td>{{leave_days}} Days Rs. {{noPay}}</td>-->
+  </tr>
+  
+   
+  </table> </td>
+
+
+
+<td>  <table>
+ <tr>
+   <th>Gross Pay</th>
+     <td>{{gross_salary}}</td>
+ </tr>
+ <tr>
+  <th>Total Deduction</th>
+
+  <td>{{total_deduction}}</td>
+ </tr>
+ <tr>
+  <th>Net Pay</th>
+
+  <td>{{total_salary}}</td>
+  </tr>
+
+  </table></td>
+
+
+ </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
